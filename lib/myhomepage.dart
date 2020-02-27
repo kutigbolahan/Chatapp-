@@ -1,6 +1,9 @@
+import 'package:chapappwithfirebase/register/login.dart';
+import 'package:chapappwithfirebase/register/register.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatelessWidget {
+  static const String routeName= 'MyHomePage';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +44,9 @@ class MyHomePage extends StatelessWidget {
                   'Login',
                   style: TextStyle(color: Colors.white),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed(Login.routeName);
+                },
                 minWidth: 200.0,
                 height: 45.0,
               ),
@@ -60,7 +65,9 @@ class MyHomePage extends StatelessWidget {
                   'Register',
                   style: TextStyle(color: Colors.white),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed(Register.routeName);
+                },
                 minWidth: 200.0,
                 height: 45.0,
               ),
