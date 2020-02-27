@@ -79,26 +79,5 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class CustomButton extends StatelessWidget {
-  final VoidCallback callback;
-  final String text;
 
-  const CustomButton({Key key, this.callback, this.text}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 100,
-      height: 100,
-      child: Material(
-        elevation: 6,
-        borderRadius: BorderRadius.circular(30.0),
-        child: MaterialButton(
-          child: Text(text),
-          onPressed: callback,
-          // minWidth: 100.0,
-          //height: 45.0,
-        ),
-      ),
-    );
-  }
-}
+
