@@ -1,5 +1,6 @@
 import 'package:chapappwithfirebase/authentication/auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 class Login extends StatefulWidget {
   static const String routeName= 'Login';
@@ -101,6 +102,24 @@ class _LoginState extends State<Login> {
                 ),
               ),
             ),
+             SignInButton(
+              Buttons.Google,
+              onPressed: () {},
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SignInButton(
+              Buttons.Facebook, 
+              onPressed: (){}),
+        SizedBox(
+              height: 20,
+            ),
+            SignInButton(Buttons.Email, onPressed: (){}),
+            SizedBox(
+              height: 20,
+            ),
+            SignInButton(Buttons.Twitter, onPressed: (){}),
             SizedBox(
               height: 20,
             ),
