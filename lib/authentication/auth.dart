@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 class Auth {
   static final _auth = FirebaseAuth.instance;
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  
 
   static void registerUser(
       BuildContext context, String email, String password) async {
