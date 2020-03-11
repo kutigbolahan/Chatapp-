@@ -1,6 +1,8 @@
 import 'package:chapappwithfirebase/authentication/auth.dart';
+import 'package:chapappwithfirebase/chats/chat.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class Login extends StatefulWidget {
   static const String routeName= 'Login';
@@ -19,6 +21,8 @@ class _LoginState extends State<Login> {
       
     }
   }
+  
+  
   
   @override
   Widget build(BuildContext context) {
@@ -102,9 +106,16 @@ class _LoginState extends State<Login> {
                 ),
               ),
             ),
-             SignInButton(
+            SignInButton(
               Buttons.Google,
-              onPressed: () {},
+              onPressed: (){
+                signInWithGoogle().whenComplete(() => 
+                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  return Chats();
+                })));
+                }
+              
+             
             ),
             SizedBox(
               height: 20,
